@@ -1,0 +1,37 @@
+moon {
+    .moon {
+    width: 100px; /* Set the width of the moon */
+    height: 100px; /* Set the height of the moon */
+    background-color: #FFFFCC; /* Set the background color to white */
+    border-radius: 50%; /* Create a circular shape */
+     position: relative;
+    }
+
+/* Style for the crescent shape */
+    .moon::before,
+    .moon::after {
+    content: "";
+    position: 10;
+    width: 20%;
+    height: 20%;
+    background-color: #000; /* Set the background color to black for the crescent */
+    border-radius: 50%;
+    }
+
+    .moon::before {
+     left: 5;
+    }
+
+    .moon::after {
+     right: 5;
+    } 
+ .moon.overlay-element {
+        position: absolute;
+        top: 0px; /* Adjust the top position as needed */
+        left: 220px; /* Adjust the left position to push it to the right of the side content */
+        width: 100px;
+        height: 100px;
+        background-color: #ff0000;
+        z-index: 2;
+    }
+}
